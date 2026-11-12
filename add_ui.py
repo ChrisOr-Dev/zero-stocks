@@ -132,4 +132,4 @@ class AddSymbol:
             d.text((W - 10, y + 1), right, font=F_TINY, fill=GREEN if added else FAINT,
                    anchor='ra')
             d.text((104, y + 1), clip(d, r['name'], F_SMALL, W - 160), font=F_SMALL, fill=DIM)
-        d.text((10, H - 15), 'F/X select  ENTER add  ESC back', font=F_SMALL, fill=DIM)
+        d.text((10, H - 15), '↑ ↓ select  ENTER add  ESC back', font=F_SMALL, fill=DIM)

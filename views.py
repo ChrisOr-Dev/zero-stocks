@@ -160,10 +160,11 @@ def draw_candles(d, candles, red_up, decimals):
             d.rectangle((x - 1, VOL[3] - vh, x + 1, VOL[3]), fill=tuple(k // 2 for k in col))
 
     ax = x1 + 4
-    d.text((ax, y0 - 6), fmt_axis(hi, decimals), font=F_TINY, fill=DIM)
-    d.text((ax, y1 - 6), fmt_axis(lo, decimals), font=F_TINY, fill=DIM)
     last = cs[-1]
     ly = y(last[4])
+    for v, vy in ((hi, y0), (lo, y1)):  # high/low labels, unless the last-price label covers them
+        if abs(vy - ly) > 12:
+            d.text((ax, vy - 6), fmt_axis(v, decimals), font=F_TINY, fill=DIM)
     col = up if last[4] >= last[1] else down
     dotted(d, x0, x1, ly, col, 3)
     d.rectangle((x1 + 2, ly - 6, W - 2, ly + 6), fill=col)
@@ -215,5 +216,5 @@ def render_detail(quote, chart, interval, red_up, now, status):
         d.text((x + w / 2, 148), lab, font=F_TINY, fill=BG if lab == interval else DIM, anchor='mm')
         x += w + 2
     d.text((W - 8, 148), span, font=F_TINY, fill=DIM, anchor='rm')
-    footer(d, status, 'Z/C period  F/X stock  ESC')
+    footer(d, status, '← → period  ↑ ↓ stock  ESC')
     return img

@@ -53,5 +53,5 @@ class Settings:
             d.text((W - 12, y), right, font=F_TEXT, fill=col, anchor='ra')
         d.text((12, 94), 'Red up is the Taiwan / China convention.', font=F_SMALL, fill=DIM)
         d.text((12, 110), 'Closed markets refresh every 5 minutes.', font=F_SMALL, fill=DIM)
-        d.text((10, H - 15), 'F/X select  ENTER change  ESC back', font=F_SMALL, fill=DIM)
+        d.text((10, H - 15), '↑ ↓ select  ← → change  ESC back', font=F_SMALL, fill=DIM)
         return img

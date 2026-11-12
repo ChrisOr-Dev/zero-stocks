@@ -23,7 +23,8 @@ def font(name, size):
     for d in FONT_DIRS:
         p = os.path.join(d, name)
         if os.path.exists(p):
-            return ImageFont.truetype(p, size)
+            # BASIC layout: ASCII-only text renders faster than with raqm, and no ligatures
+            return ImageFont.truetype(p, size, layout_engine=ImageFont.Layout.BASIC)
     return ImageFont.load_default(size)
 
 
