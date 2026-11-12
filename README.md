@@ -4,6 +4,8 @@ A live stock watchlist and K-line (candlestick) charts on the M5Stack CardputerZ
 
 ![Watchlist](screenshots/main.png) ![K-line](screenshots/kline.png)
 
+[Demo video](screenshots/demo.mp4) (21 s, recorded on the device)
+
 - **Watchlist**: price, the day's change and an intraday sparkline for each stock; a dot per market shows whether it is open.
 - **K-line**: candlesticks with volume, day high/low and market state. The candle period is 1m, 5m, 15m, 30m, 1h, 1D, 1W or 1M (switch with Z/C; the choice is remembered).
 - **Add**: pick a market (US / HK / TW / CN / JP / All) and type a name or code, e.g. `apple`, `700`, `2330`, `^HSI`, `BTC-USD`.
