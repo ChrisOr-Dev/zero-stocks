@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Stocks
+Comment=Live stock watchlist and K-line charts (US, HK, TW and more)
+Exec=/usr/share/APPLaunch/bin/zero-stocks
+Icon=share/images/zero-stocks.png
+Terminal=false
+Categories=Utility;
+StartupNotify=false
