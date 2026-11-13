@@ -1,6 +1,6 @@
 {
   "package_name": "zero-stocks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "app_name": "Stocks",
   "bin_name": "zero-stocks",
   "description": "Live stock watchlist and K-line charts for CardputerZero",
