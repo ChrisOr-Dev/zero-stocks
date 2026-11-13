@@ -17,6 +17,7 @@ import time
 
 import config
 import keys
+import net
 import quotes as Q
 import views
 from theme import DIM, FAINT, RED, WARN, W, H, F_BOLD_SMALL
@@ -334,6 +335,7 @@ def make_icon(path, size=100):
 
 
 def main(argv):
+    net.prefer_ipv4()
     if '--fetch' in argv:
         cfg = config.load()
         for s, q in Q.fetch_quotes(cfg['symbols']).items():

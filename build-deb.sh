@@ -17,7 +17,7 @@ L=$ROOT/usr/share/APPLaunch
 mkdir -p "$APP" "$L/bin" "$L/applications" "$L/share/images" "$ROOT/DEBIAN"
 
 install -m 644 zero_stocks.py quotes.py views.py theme.py config.py keys.py hold_exit.py \
-    add_ui.py settings_ui.py "$APP/"
+    add_ui.py settings_ui.py net.py "$APP/"
 printf '#!/bin/sh\nexec /usr/bin/python3 /usr/share/%s/zero_stocks.py "$@"\n' "$PKG" > "$L/bin/$PKG"
 chmod 755 "$L/bin/$PKG"
 install -m 644 zero-stocks.desktop "$L/applications/$PKG.desktop"
